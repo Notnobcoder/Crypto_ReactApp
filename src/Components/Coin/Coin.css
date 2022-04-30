@@ -1,0 +1,21 @@
+.coin{
+    width: 80%;
+    height: 19vh;
+    display: flex;
+    background-color: aliceblue;
+    justify-content: space-around;
+    align-items: center;
+}
+.coinimage{
+    width: 100px;
+    height: 100px;
+}
+
+.table{
+    width: 800px;
+    background-color: blueviolet;
+}
+.table tr{
+    justify-content: center;
+    align-items: center;
+}
