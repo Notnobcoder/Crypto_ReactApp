@@ -29,11 +29,11 @@ const StyledTableRow = styled(TableRow)(({ theme }) => ({
   },
 }));
 
-export default function Coin({name,icon,price,percentage,symbol}) {
+export default function Coin({ name, icon, price, percentage, symbol }) {
   return (
     <TableContainer component={Paper}>
-      <Table sx={{ minWidth: 700 }} aria-label="customized table">
-        <TableHead>
+      <Table sx={{ minWidth: 700, }} aria-label="customized table">
+        <TableHead sx={{ marginY: "10px" }}>
           <TableRow>
             <StyledTableCell>Name</StyledTableCell>
             <StyledTableCell align="right">Icon</StyledTableCell>
@@ -43,17 +43,17 @@ export default function Coin({name,icon,price,percentage,symbol}) {
           </TableRow>
         </TableHead>
         <TableBody>
-            <StyledTableRow key={name}>
-              <StyledTableCell component="th" scope="row">
-                {name}
-              </StyledTableCell>
-              <StyledTableCell align="right">
-                  <img src={icon} alt="" className='coinimage' />
-              </StyledTableCell>
-              <StyledTableCell align="right">{price}</StyledTableCell>
-              <StyledTableCell align="right">{percentage}</StyledTableCell>
-              <StyledTableCell align="right">{symbol}</StyledTableCell>
-            </StyledTableRow>
+          <StyledTableRow key={name}>
+            <StyledTableCell component="th" scope="row">
+              {name}
+            </StyledTableCell>
+            <StyledTableCell align="right">
+              <img src={icon} alt="" className='coinimage' />
+            </StyledTableCell>
+            <StyledTableCell align="right">{price}</StyledTableCell>
+            <StyledTableCell align="right">{percentage}</StyledTableCell>
+            <StyledTableCell align="right">{symbol}</StyledTableCell>
+          </StyledTableRow>
         </TableBody>
       </Table>
     </TableContainer>
